@@ -1,0 +1,138 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class JobPostPackagesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        DB::table('job_post_packages')->insert([
+            [
+                'title' => 'VỊ TRÍ TUYỂN GẤP',
+                'price' => 2500000,
+                'period' => '30',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => true,
+                'display_best' => false,
+                'display_haste' => false,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong Việc làm tuyển gấp kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => 1,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'VỊ TRÍ TUYỂN TỐT NHẤT',
+                'price' => 2000000,
+                'period' => '30',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => false,
+                'display_best' => true,
+                'display_haste' => false,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong việc làm tốt nhất kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => null,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'VỊ TRÍ TUYỂN HÀNG ĐẦU',
+                'price' => 2000000,
+                'period' => '30',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => false,
+                'display_best' => false,
+                'display_haste' => true,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong việc làm hàng đầu kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => null,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'VỊ TRÍ TUYỂN GẤP',
+                'price' => 1500000,
+                'period' => '7',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => true,
+                'display_best' => false,
+                'display_haste' => false,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong Việc làm tuyển gấp kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => 1,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'VỊ TRÍ TUYỂN TỐT NHẤT',
+                'price' => 1000000,
+                'period' => '7',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => false,
+                'display_best' => true,
+                'display_haste' => false,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong việc làm tốt nhất kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => null,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'VỊ TRÍ TUYỂN HÀNG ĐẦU',
+                'price' => 1000000,
+                'period' => '7',
+                'quantity' => 10,
+                'limit_job_post' => 10,
+                'display_top' => false,
+                'display_best' => false,
+                'display_haste' => true,
+                'descriptions' => 'Trải nghiệm đăng tin tuyển dụng với vị trí nổi bật trong việc làm hàng đầu kết hợp cùng các dịch vụ cao cấp, giá dùng thử hấp dẫn.',
+                'label' => null,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'ADD ON LABEL: GẤP',
+                'price' => 1000000,
+                'period' => '30',
+                'quantity' => 0,
+                'limit_job_post' => 5,
+                'display_top' => false,
+                'display_best' => false,
+                'display_haste' => false,
+                'descriptions' => 'Tin tuyển dụng được gắn nhãn GẤP vào tiêu đề tin.',
+                'label' => 1,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'ADD ON LABEL: HOT',
+                'price' => 1000000,
+                'period' => '30',
+                'quantity' => 0,
+                'limit_job_post' => 5,
+                'display_top' => false,
+                'display_best' => false,
+                'display_haste' => false,
+                'descriptions' => 'Tin tuyển dụng được gắn nhãn HOT vào tiêu đề tin.',
+                'label' => 2,
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
