@@ -70,9 +70,8 @@ class JobCategoryResource extends Resource implements HasShieldPermissions
                                         ->required()
                                         ->maxLength(255)
                                         ->live(onBlur: true)
-                                        ->afterStateUpdated(fn(string $operation, $state, Set $set) =>
-                                            $set('slug', Str::slug($state))
-                                        )
+                                        ->afterStateUpdated(fn(string $operation, $state, Set $set) => $operation
+                                        === 'create' ? $set('slug', Str::slug($state)) : null)
                                         ->label('Tên danh mục'),
                                     TextInput::make('slug')
                                         ->required()
@@ -85,7 +84,7 @@ class JobCategoryResource extends Resource implements HasShieldPermissions
                                         ->label('Hình ảnh')
                                         ->image()
                                         ->imageEditor()
-                                        // ->required()
+                                        ->required()
                                         ->disk('public')
                                         ->directory('images/job-category')
                                         ->maxSize(1024 * 5)
