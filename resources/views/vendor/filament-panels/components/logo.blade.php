@@ -1,4 +1,4 @@
-<h2 class="logo-filament"><a href="{{ route('client.client.index') }}">VIECLAMPHUQUOC</a>
+<h2 class="logo-filament"><a href="{{ route('client.client.index') }}">CANTHO-JOBIT</a>
 </h2>
 
 <style>

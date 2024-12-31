@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xác thực tài khoản</title>
+    <title>Xác thực tài khoản ứng viên</title>
+    <style>
+        p {
+            font-size: 16px !important;
+            line-height: 25px;
+        }
+    </style>
 </head>
 <body style="font-family: Arial, sans-serif; color: #333; margin: 0; padding: 20px; background-color: #f4f4f9;">
 
@@ -14,8 +20,8 @@
     <div style="margin-top: 15px;">
         <p>Bạn đã đăng ký tài khoản trên website
             <strong>
-                <a href="https://www.vieclamphuquoc.com.vn/" style="color: #007bff; text-decoration: none;">
-                    vieclamphuquoc.com.vn
+                <a href="https://canthoitjob.com/" style="color: #007bff; text-decoration: none;">
+                    canthoitjob.com
                 </a>
             </strong>. Nếu đó là bạn, xin hãy xác nhận kích hoạt tài khoản có email là: <strong>{{$user->email}}</strong>.
         </p>
@@ -35,7 +41,7 @@
 
     <div style="margin-top: 20px;">
         <div style="text-align: center;">
-            <img src="{{ asset('assets/client/imgs/template/pq2.svg') }}" alt="ViecLamPhuQuoc" style="width: 150px;">
+            <img src="{{ getStorageImageUrl($settings->logo_website, config('image.main-logo')) }}" alt="ViecLamPhuQuoc" style="width: 150px;">
         </div>
         <div style="text-align: center; margin-top: 15px;">
             <p><strong>Việc Làm Phú Quốc</strong></p>
@@ -45,7 +51,7 @@
                 <a href="#" style="text-decoration: none; color: #007bff;">Phí đăng tin</a> |
                 <a href="#" style="text-decoration: none; color: #007bff;">Hướng dẫn</a>
             </p>
-            <p>Email: <a href="mailto:vieclamphuquoc.vn" style="text-decoration: none; color: #007bff;">vieclamphuquoc@gmail.com</a> - Hotline: 09777.850.32</p>
+            <p>Email: <a href="mailto:{{ config('contact.mail') }}" style="text-decoration: none; color: #007bff;">{{ config('contact.mail') }}</a> - Hotline: {{ config('contact.phone') }}</p>
         </div>
     </div>
 </div>

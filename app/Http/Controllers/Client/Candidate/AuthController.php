@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
+use Filament\Notifications\Notification;
 
 
 class AuthController extends Controller
@@ -82,6 +83,17 @@ class AuthController extends Controller
         // Cập nhật email_verified_at
         $account->email_verified_at = now();
         $account->save();
+
+        if($account->role == 'employer') {
+            Notification::make()
+                ->title(__('Tài khoản xác thực thành công. Bây giờ bạn có thể đăng nhập ngay.'))
+                ->success()
+                ->duration(10000) 
+                ->send();
+
+            return redirect()->route('filament.employer.auth.login');
+        }
+
 
         flash()->success('Tài khoản xác thực thành công. Bây giờ bạn có thể đăng nhập ngay.', [], 'Thành công!');
         return redirect()->route('client.candidate.login');

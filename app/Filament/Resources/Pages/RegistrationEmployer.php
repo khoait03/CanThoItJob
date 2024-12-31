@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\Pages;
 
+use App\Jobs\Employer\VerificationEmailBusiness;
 use App\Models\Address;
 use App\Models\Employer;
 use App\Models\User;
 use Database\Seeders\RegisterEmployerPermissionsSeeder;
+use Filament\Facades\Filament;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
@@ -13,82 +15,22 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Form;
 use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
+use Filament\Notifications\Auth\VerifyEmail;
+use Filament\Notifications\Notification;
 use Filament\Pages\Auth\Register;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Log;
 
 
 class RegistrationEmployer extends Register
 {
     protected ?string $maxWidth = '3xl';
 
-//    public function form(Form $form): Form
-//    {
-//        return $form
-//            ->schema([
-//                Wizard::make([
-//                    Wizard\Step::make('Tài khoản')
-//                        ->schema([
-//                            $this->getNameFormComponent(),
-//                            $this->getEmailFormComponent(),
-//                        ]),
-//                    Wizard\Step::make('Công ty')
-//                        ->schema([
-//                            $this->getCompanyNameFormComponent(),
-//                            $this->getCompanyPhoneFormComponent(),
-//                            $this->getTaxCodeFormComponent(),
-//                            $this->getCompanyLogoFormComponent(),
-//                        ]),
-//                    Wizard\Step::make('Mật khẩu')
-//                        ->schema([
-//                            $this->getPasswordFormComponent(),
-//                            $this->getPasswordConfirmationFormComponent(),
-//                        ]),
-//                ])->submitAction(new HtmlString(Blade::render(<<<BLADE
-//                    <x-filament::button
-//                        type="submit"
-//                        size="sm"
-//                        wire:submit="register"
-//                    >
-//                        Đăng ký
-//                    </x-filament::button>
-//                    BLADE))),
-//            ]);
-//    }
-
-
-//    public function form(Form $form): Form
-//    {
-//        return $form
-//            ->schema([
-//                Action::make('create')->steps([
-//                    Grid::make(2)->schema([
-//                        $this->getEmailFormComponent()->columnSpanFull(),
-//                        $this->getPasswordFormComponent(),
-//                        $this->getPasswordConfirmationFormComponent(),
-//
-//                        $this->getCompanyNameFormComponent()->columnSpanFull(),
-//
-//                        $this->getTaxCodeFormComponent(),
-//                        $this->getCompanyPhoneFormComponent(),
-//
-//                        $this->getCompanyLogoFormComponent()->columnSpanFull(),
-//
-//
-//                    ])
-//            ])->submitAction(new HtmlString(Blade::render(<<<BLADE
-//                    <x-filament::button
-//                        type="submit"
-//                        size="sm"
-//                        wire:submit="register"
-//                    >
-//                        Đăng ký
-//                    </x-filament::button>
-//                    BLADE))),
-//            ]);
-//    }
 
     public function form(Form $form): Form
     {
@@ -137,6 +79,7 @@ class RegistrationEmployer extends Register
             'password' => $data['password'],
             'role' => 'employer', // Assign the employer role
             'active_status' => 1,
+            'remember_token' => Str::random(40),
         ]);
 
         // Handle the company logo upload
@@ -168,11 +111,24 @@ class RegistrationEmployer extends Register
         ]);
 
 
-//        auth()->login($user);
+
+        try {
+            // Gửi email xác thực
+            dispatch(new VerificationEmailBusiness($user));
+            Notification::make()
+                ->title(__('Đăng ký thành công, vui lòng kiểm tra email xác thực.'))
+                ->success()
+                ->duration(10000) 
+                ->send();
+
+        } catch (\Exception $e) {
+            // Log lỗi nếu có
+            Log::error('Error dispatching email verification job: ' . $e->getMessage());
+        }
 
         // Chạy seeder AssignEmployerPermissionsSeeder
         // Phân quyền Employer cho người dùng vừa đăng ký
-        (new RegisterEmployerPermissionsSeeder())->run($user->id);
+       (new RegisterEmployerPermissionsSeeder())->run($user->id);
 
         return app(RegistrationResponse::class);
     }

@@ -58,7 +58,7 @@
                 <a href="#" style="text-decoration: none; color: #007bff;">Phí đăng tin</a> |
                 <a href="#" style="text-decoration: none; color: #007bff;">Hướng dẫn</a>
             </p>
-            <p>Email: <a href="mailto:vieclamphuquoc.hotro@gmail.com">vieclamphuquoc.com.vn</a> - Hotline: 0336.216.546</p>
+            <p>Email: <a href="mailto:{{ config('contact.mail') }}">{{ config('contact.mail') }}</a> - Hotline: {{ config('contact.phone') }}</p>
         </div>
     </div>
 </div>

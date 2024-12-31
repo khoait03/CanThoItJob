@@ -16,7 +16,7 @@ Route::get('/ung-vien/dang-xuat', [AuthCandidateController::class, 'logout'])->n
 Route::get('/ung-vien/dang-ky', [AuthCandidateController::class, 'register'])->name('candidate.register');
 Route::post('/ung-vien/dang-ky', [AuthCandidateController::class, 'handleRegister'])->name('candidate.register.post');
 
-Route::get('/ung-vien/xac-thuc/{token}', [AuthCandidateController::class, 'verify'])->name('candidate.verify-email');
+Route::get('/tai-khoan/xac-thuc/{token}', [AuthCandidateController::class, 'verify'])->name('candidate.verify-email');
 
 Route::get('/nha-tuyen-dung/dang-nhap', [EmployerController::class, 'login'])->name('employer.login');
 Route::get('/nha-tuyen-dung/dang-ky', [EmployerController::class, 'register'])->name('employer.register');

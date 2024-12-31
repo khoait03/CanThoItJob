@@ -9,5 +9,5 @@ return [
     'avatar' => 'default/user.png',
     'blog' => 'default/blog.jpg',
     'company-banner' => 'default/photo-cover.png',
-    'banner-vieclamphuquoc' => 'default/banner-vieclamphuquoc.png'
+    'banner-vieclamphuquoc' => 'default/banner-canthoitjob.png'
 ];
