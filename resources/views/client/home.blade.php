@@ -10,13 +10,12 @@
                         <div class="col-xl-11 col-lg-12">
                             <div class="block-banner">
                                 <h1 style="font-size: 30px;"
-                                    class="heading-banner wow animate__animated animate__fadeInUp">VIỆC LÀM PHÚ QUỐC
+                                    class="heading-banner wow animate__animated animate__fadeInUp">VIỆC LÀM CẦN THƠ
                                     <br class="d-none d-lg-block">
 
                                 </h1>
                                 <h3 style="font-size: 20px;">
-                                    Tuyển Dụng Việc Làm Tại Phú Quốc
-                                    Và Khu Vực Miền Nam
+                                    Tuyển Dụng Việc Làm IT tại Cần Thơ
                                 </h3>
 
                                 <div class="row mt-10">
