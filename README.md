@@ -1,29 +1,29 @@
 # Hệ thống website đăng tin tuyển dụng và tìm kiếm việc tích hợp công cụ tạo CV
 
-# Phạm vi dự án
+## Phạm vi dự án
 
--   Công nghệ: Laravel, ReactJS, MySQL, JWT
+-   Công nghệ:  ReactJS, Laravel, Filament, Bootstap 5, Tailwind, MySQL, Pusher...
 
--   Mô tả:  Là một nền tảng tuyển dụng và tìm kiếm việc làm. Website kết nối nhà tuyển dụng và ứng viên, giúp quá trình tuyển dụng trở nên nhanh chóng và hiệu quả hơn.
+-   Mô tả:  Là một nền tảng tuyển dụng và tìm kiếm việc làm. Website kết nối nhà tuyển dụng và ứng viên, giúp quá trình tuyển dụng trở nên nhanh chóng và hiệu quả hơn...
 
-### 🧑‍💼 Ứng Viên
+#### 🧑‍💼 Ứng Viên
 - 🔹 Đăng ký, đăng nhập tài khoản.
 - 🔹 Tìm kiếm và ứng tuyển việc làm.
 - 🔹 Sử dụng công cụ tạo CV chuyên nghiệp.
-- 🔹 Quản lý danh sách công việc đã ứng tuyển.
+- 🔹 Quản lý danh sách công việc đã ứng tuyển...
 
-### 🏢 Nhà Tuyển Dụng
+#### 🏢 Nhà Tuyển Dụng
 - 🔹 Đăng tin tuyển dụng, tiếp cận ứng viên tiềm năng.
 - 🔹 Nhận và quản lý CV từ ứng viên.
 - 🔹 Gửi email thông báo kết quả tuyển dụng.
 - 🔹 Tạo lịch phỏng vấn và quản lý quy trình tuyển dụng.
-- 🔹 Mua gói đăng tin để nâng cao hiệu quả tuyển dụng.
+- 🔹 Mua gói đăng tin để nâng cao hiệu quả tuyển dụng...
 
-### 🔧 Quản Trị Viên
+#### 🔧 Quản Trị Viên
 - 🔹 Quản lý toàn bộ hệ thống.
 - 🔹 Duyệt tin tuyển dụng trước khi hiển thị.
 - 🔹 Quản lý bài viết, nội dung trên website.
-- 🔹 Phân quyền tài khoản theo từng vai trò
+- 🔹 Phân quyền tài khoản theo từng vai trò...
 
 #### 🌐 Webdemo: https://www.vieclamphuquoc.com.vn/
 
@@ -114,5 +114,12 @@
     http://127.0.0.1:8000/
     ```
 
-Đóng góp
-Nếu bạn muốn đóng góp cho dự án, vui lòng tạo pull request và tuân thủ các quy tắc đóng góp.
+## 📜 Copyright Notice
+
+© 2024 Nguyen Le Anh Khoa. All rights reserved.
+
+This project and its contents are protected under copyright law. Unauthorized copying, distribution, or modification of any part of this project without prior written permission from the author is strictly prohibited.
+
+For inquiries, please contact:  
+📞 Phone: 0336216546  
+📧 Email: [khoacntt2003@gmail.com](mailto:khoacntt2003@gmail.com), [nguyenleanhkhoa.dev@gmail.com](mailto:nguyenleanhkhoa.dev@gmail.com)  
