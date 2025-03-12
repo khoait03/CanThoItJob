@@ -33,13 +33,23 @@
 -   Nhà tuyển dụng: nhatuyendung@gmail.com - 123456
 
 # Trang chủ
-<img src="https://raw.githubusercontent.com/khoait03/laravel-react-spa-management/main/public/uploads/github/job_vieclam.png" alt="Job Demo" width="900">
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_vieclam.png" alt="Job Demo" width="900">
 
 # Mẫu CV
-<img src="https://raw.githubusercontent.com/khoait03/laravel-react-spa-management/main/public/uploads/github/job_maucv.png" alt="Job Demo" width="900">
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_maucv.png" alt="Job Demo" width="900">
 
-# Admin
 
+# Admin danh sách việc làm
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_vieclam.png" alt="Job Demo" width="900">
+
+# Admin ứng viên
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_ungvien.png" alt="Job Demo" width="900">
+
+# Admin nhà tuyển dụng
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_nhatuyendung.png" alt="Job Demo" width="900">
+
+# Phân quyền
+<img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_phanquyen.png" alt="Job Demo" width="900">
 
 ## Cài đặt
 
@@ -97,7 +107,7 @@
 
 9. Truy cập vào đường dẫn để xem ứng dụng:
     ```bash
-    http://localhost:3000/
+    http://127.0.0.1:8000/
     ```
 
 Đóng góp
