@@ -25,30 +25,34 @@
 - 🔹 Quản lý bài viết, nội dung trên website.
 - 🔹 Phân quyền tài khoản theo từng vai trò
 
+#### 🌐 Webdemo: https://www.vieclamphuquoc.com.vn/
 
-# Tài khoản
+#### 🔧 Quản Trị Viên: https://www.vieclamphuquoc.com.vn/admin
+#### 🏢 Nhà Tuyển Dụng: https://www.vieclamphuquoc.com.vn/business
+
+#### Tài khoản
 
 -   Admin: admin@gmail.com - admin123456
 -   Ứng viên: ungvien@gmail.com - 123456
 -   Nhà tuyển dụng: nhatuyendung@gmail.com - 123456
 
-# Trang chủ
+### Tin tuyển dụng
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_vieclam.png" alt="Job Demo" width="900">
 
-# Mẫu CV
+### Mẫu CV
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_maucv.png" alt="Job Demo" width="900">
 
 
-# Admin danh sách việc làm
+### Admin danh sách việc làm
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_vieclam.png" alt="Job Demo" width="900">
 
-# Admin ứng viên
+### Admin ứng viên
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_ungvien.png" alt="Job Demo" width="900">
 
-# Admin nhà tuyển dụng
+### Admin nhà tuyển dụng
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_nhatuyendung.png" alt="Job Demo" width="900">
 
-# Phân quyền
+### Phân quyền
 <img src="https://raw.githubusercontent.com/khoait03/CanThoItJob/main/public/uploads/github/job_admin_phanquyen.png" alt="Job Demo" width="900">
 
 ## Cài đặt
