@@ -135,14 +135,14 @@ class SiteSettingResource extends Resource implements HasShieldPermissions
                                 Textarea::make('seo_description')
                                     ->label('Mô tả SEO')
                                     ->nullable()
-                                    ->maxLength(255)
+                                    ->maxLength(500)
                                     ->helperText('Tối đa 255 ký tự'),
 
                                 FileUpload::make('seo_image')->label('Ảnh SEO')->nullable()
                                     ->helperText('Kích thước tối ưu: 300x200px')
                                     ->helperText('Chọn định dạng ảnh PNG, JPG, kích thước tối đa 2MB')
                                     ->acceptedFileTypes(['image/png', 'image/jpeg'])
-                                    ->maxSize(2048)
+                                    ->maxSize(10000)
                                     ->directory('vieclamphuquoc/seo')
                                     ->image()
                                     ->enableOpen()
